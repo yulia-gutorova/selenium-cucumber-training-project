@@ -80,3 +80,5 @@ This training project assumes that project team members create their individual 
 
 A main branch is used only for initial state of the project and for the first clone by team members.
 
+
+
