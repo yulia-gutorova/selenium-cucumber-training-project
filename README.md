@@ -24,6 +24,13 @@ All dependencies are listed in `pom.xml`
 
 ##### Step 1. Clone this repository to your local machine
 
+After cloning this repo to your local machine, create your own branch.
+
+Then in IntelliJ open pom.xml file as project.
+
+IntelliJ will ask to set default JDK, so chose version 11 or 12.
+
+
 ##### Step 2. Configuring Selenium
 
 There are two possibilities to configure local browsers - via `Selenium WebDriver` or via a `WebDriverManager`. This repository already contains configuration for WebDriverManager with Chrome browser.
@@ -45,7 +52,7 @@ Detailed information how to enable and configure Selenium in IntelliJ can be fou
 
 ##### Step 3. Configuring Cucumber
 
-IntelliJ IDEA allows you to work with Cucumber in other languages apart from Java provided that the required plugins are installed and enabled.
+IntelliJ IDEA allows you to work with Cucumber in other languages apart from Java provided that the required plugins are installed and enabled. IntelliJ will ask to install Gherkin plugin, so confirm this installation.
 
 Detailed information how to enable and configure Cucumber in IntelliJ can be found here: https://www.jetbrains.com/help/idea/cucumber-support.html.
 
