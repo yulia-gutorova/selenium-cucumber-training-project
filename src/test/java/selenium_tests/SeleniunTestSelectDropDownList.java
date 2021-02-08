@@ -39,7 +39,6 @@ public class SeleniunTestSelectDropDownList extends SeleniumSetUppClass{
             String expectedString = "Day selected :- " + option.getText();
             String actualString = driver.findElement(By.xpath("//p[@class='selected-value']")).getText();
             Assert.assertEquals(expectedString, actualString);
-
         });
     }
 
