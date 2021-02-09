@@ -15,13 +15,13 @@ Feature: Input form with validation
     And I input Website as
           |https://www.seleniumeasy.com|
     And I choose hosting "<radioButton>"
-    And I write project description as "This is a training project"
+    And I write projects description as "This is a training project"
     And I click on the button Send
     Then I will see that all the fields have default values
 
     Examples:
       |radioButton|
       |//input[@value='yes']|
-      |//input[@value='no']                  |
+      |//input[@value='no'] |
 
 

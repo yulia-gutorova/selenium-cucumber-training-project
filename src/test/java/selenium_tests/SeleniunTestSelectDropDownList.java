@@ -19,12 +19,12 @@ public class SeleniunTestSelectDropDownList extends SeleniumSetUppClass{
     public void a_openPage()
     {
         driver.get(SITE_URL);
-        Assertions.assertEquals(SITE_URL, driver.getCurrentUrl());
         BasePage.sleep(1000);
         Assertions.assertEquals(SITE_URL, driver.getCurrentUrl());
     }
 
     @Test
+    @Disabled
     @DisplayName("Select value from drop down list")
     public void b_selectListDemo()
     {
@@ -43,6 +43,7 @@ public class SeleniunTestSelectDropDownList extends SeleniumSetUppClass{
     }
 
     @Test
+    @Disabled
     @DisplayName("Multi Select List Demo")
     public void c_selectListDemo()
     {

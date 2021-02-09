@@ -19,8 +19,6 @@ public class SeleniumTestRadioButton extends  SeleniumSetUppClass{
         driver.get(SITE_URL);
         Assertions.assertEquals(SITE_URL, driver.getCurrentUrl());
         BasePage.sleep(1000);
-
-        Assertions.assertEquals(SITE_URL, driver.getCurrentUrl());
     }
 
     @Test
@@ -29,7 +27,7 @@ public class SeleniumTestRadioButton extends  SeleniumSetUppClass{
     {
         List<WebElement> radioButtons = driver.findElements(By.xpath("//input[@name='optradio']"));
 
-        radioButtons.stream().forEach
+        radioButtons.forEach
                 ( button->
                         {
                             button.click();
@@ -55,12 +53,12 @@ public class SeleniumTestRadioButton extends  SeleniumSetUppClass{
         List <WebElement> sex = driver.findElements(By.xpath("//input[@name='gender']"));
         List <WebElement> ageGroup = driver.findElements(By.xpath("//input[@name='ageGroup']"));
 
-        sex.stream().forEach(sexRadioButton ->
+        sex.forEach(sexRadioButton ->
         {
             sexRadioButton.click();
             BasePage.sleep(1000);
 
-            ageGroup.stream().forEach(ageGroupButton ->
+            ageGroup.forEach(ageGroupButton ->
             {
                 ageGroupButton.click();
                 BasePage.sleep(1000);

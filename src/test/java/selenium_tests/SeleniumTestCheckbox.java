@@ -56,7 +56,6 @@ public class SeleniumTestCheckbox {
         Assertions.assertEquals(SITE_URL, driver.getCurrentUrl());
         sleep(1000);
 
-        Assertions.assertEquals(SITE_URL, driver.getCurrentUrl());
     }
 
     @Test
@@ -88,7 +87,7 @@ public class SeleniumTestCheckbox {
         sleep(1000);
 
         Assertions.assertTrue(checkButton.getAttribute("value").contains("Uncheck All"));
-        Assertions.assertTrue(checkBoxes.stream().allMatch(box -> box.isSelected()));
+        Assertions.assertTrue(checkBoxes.stream().allMatch(WebElement::isSelected));
     }
 
     @Test
@@ -106,7 +105,7 @@ public class SeleniumTestCheckbox {
         sleep(1000);
 
         Assertions.assertTrue(checkButton.getAttribute("value").contains("Check All"));
-        Assertions.assertTrue(checkBoxes.stream().noneMatch(box -> box.isSelected()));
+        Assertions.assertTrue(checkBoxes.stream().noneMatch(WebElement::isSelected));
     }
 
 
@@ -116,10 +115,10 @@ public class SeleniumTestCheckbox {
     {
         List<WebElement> checkBoxes = driver.findElements(By.xpath("//input[@class='cb1-element']"));
 
-        checkBoxes.stream().forEach(box -> box.click());
+        checkBoxes.forEach(WebElement::click);
         sleep(1000);
 
-        checkBoxes.stream().limit(2).forEach(box -> box.click());
+        checkBoxes.stream().limit(2).forEach(WebElement::click);
         sleep(1000);
 
         WebElement checkButton = driver.findElement(By.id("check1"));
