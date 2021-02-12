@@ -29,31 +29,19 @@ public class SubmitInputForms_Steps {
     List <WebElement> nameOfStates;
     WebElement radiobutton;
 
-   @Before
-    public void setUpp()
-    {
+
+    @Given("I'm on the homepage")
+    public void iMOnTheHomepage(String url) {
         System.out.println("---------- Cucumber test Submit input forms ---------\n");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         BasePage.sleep(1000);
-
-    }
-
-    @After
-    public void tearDown()
-    {
-        driver.quit();
-    }
-
-    @Given("I'm on the homepage")
-    public void iMOnTheHomepage(String url) {
         System.out.print("1.  ");
         driver.get(url);
         BasePage.sleep(1000);
         Assertions.assertEquals(url, driver.getCurrentUrl());
         BasePage.sleep(1000);
-        Assertions.assertEquals(url, driver.getCurrentUrl());
     }
 
     @When("I input First name as {string}")
@@ -128,7 +116,7 @@ public class SubmitInputForms_Steps {
         BasePage.sleep(1000);
     }
 
-    @And("I write project description as {string}")
+    @And("I write projects description as {string}")
     public void iWriteProjectDescriptionAs(String description) {
         System.out.print("12. ");
         driver.findElement(By.name("comment")).sendKeys( description);
@@ -139,7 +127,7 @@ public class SubmitInputForms_Steps {
     public void iClickOnTheButtonSend() {
         System.out.print("13. ");
         driver.findElement(By.xpath("//button[@type='submit']")).submit();
-        BasePage.sleep(3000);
+        BasePage.sleep(1000);
     }
 
     @Then("I will see that all the fields have default values")
@@ -162,6 +150,8 @@ public class SubmitInputForms_Steps {
         Assertions.assertFalse(driver.findElement(By.xpath("//input[@value='yes']")).isSelected());
         Assertions.assertFalse(driver.findElement(By.xpath("//input[@value='no']")).isSelected());
         Assertions.assertEquals("Project Description", driver.findElement(By.name("comment")).getAttribute("placeholder"));
+        BasePage.sleep(1000);
+        driver.quit();
     }
 
 }
