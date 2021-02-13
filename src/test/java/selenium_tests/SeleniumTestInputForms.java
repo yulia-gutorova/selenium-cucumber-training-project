@@ -7,13 +7,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@TestMethodOrder(MethodOrderer.Alphanumeric.class)
+@TestMethodOrder(MethodOrderer.MethodName.class)
 
 public class SeleniumTestInputForms extends SeleniumSetUppClass{
 
     String SITE_URL = "https://www.seleniumeasy.com/test/basic-first-form-demo.html";
 
-    @DisplayName("Open a website")
+    @DisplayName("Open a page")
     @Test
     public void a_openPage()
     {

@@ -32,7 +32,7 @@ public class SeleniumTestRadioButton extends  SeleniumSetUppClass{
                         {
                             button.click();
                             driver.findElement(By.id("buttoncheck")).click();
-                            BasePage.sleep(2000);
+                            BasePage.sleep(1000);
                             switch (button.getAttribute("value"))
                             {
                                 case "Male":
