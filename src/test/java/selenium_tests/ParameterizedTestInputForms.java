@@ -19,9 +19,11 @@ public class ParameterizedTestInputForms extends SeleniumSetUppClass{
     {
         return Stream.of(
                 Arguments.of("1", "2", "3"),
-                Arguments.of("-1","-2","-3")
-                //Arguments.of(0 , 0, 0),
-                //Arguments.of(-1, 2, 1)
+                Arguments.of("-1","-2","-3"),
+                Arguments.of("-100","2","-98"),
+                Arguments.of("-26464643","26464643","0"),
+                Arguments.of("jdbcjfwhe","-2","NaN"),
+                Arguments.of("jdnfhiew","-oiokl","NaN")
         );
     }
 
@@ -46,6 +48,7 @@ public class ParameterizedTestInputForms extends SeleniumSetUppClass{
 
     @ParameterizedTest
     @MethodSource("data")
+    @DisplayName("Enter two messages with different parameters")
     public void  b_enterValues(String arg1, String arg2, String summa)
     {
         WebElement enterValueA = driver.findElement(By.id(("sum1")));
@@ -64,8 +67,6 @@ public class ParameterizedTestInputForms extends SeleniumSetUppClass{
 
         WebElement total = driver.findElement(By.id("displayvalue"));
         Assertions.assertEquals(summa, total.getText());
-
     }
-
 
 }
