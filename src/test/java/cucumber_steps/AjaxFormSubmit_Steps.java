@@ -15,7 +15,7 @@ import selenium_tests.BasePage;
 import java.util.concurrent.TimeUnit;
 
 
-public class AjaxFormSubmit{
+public class AjaxFormSubmit_Steps{
 
      WebDriver driver;
      WebDriverWait wait;
@@ -63,7 +63,7 @@ public class AjaxFormSubmit{
     @Then("I will see a successMessage {string}")
     public void iWillSeeASuccessMessage(String successMessage) {
         System.out.print("5.  ");
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         String mess = driver.findElement(By.id("submit-control")).getText();
         Assertions.assertTrue(mess.contains("Form submited Successfully!"));
         driver.quit();

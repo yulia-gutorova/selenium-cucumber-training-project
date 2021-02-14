@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-@TestMethodOrder(MethodOrderer.Alphanumeric.class)
+@TestMethodOrder(MethodOrderer.MethodName.class)
 
 public class SeleniunTestSelectDropDownList extends SeleniumSetUppClass{
 
@@ -24,7 +24,6 @@ public class SeleniunTestSelectDropDownList extends SeleniumSetUppClass{
     }
 
     @Test
-    @Disabled
     @DisplayName("Select value from drop down list")
     public void b_selectListDemo()
     {
@@ -43,7 +42,6 @@ public class SeleniunTestSelectDropDownList extends SeleniumSetUppClass{
     }
 
     @Test
-    @Disabled
     @DisplayName("Multi Select List Demo")
     public void c_selectListDemo()
     {
