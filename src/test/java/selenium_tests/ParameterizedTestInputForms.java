@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.stream.Stream;
 
-@TestMethodOrder(MethodOrderer.MethodName.class)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ParameterizedTestInputForms extends SeleniumSetUppClass{
 
     public  static Stream <Arguments> data()
@@ -31,6 +31,7 @@ public class ParameterizedTestInputForms extends SeleniumSetUppClass{
 
     @DisplayName("Open a website")
     @Test
+    @Order(1)
     public void a_openPage() {
         driver.get(SITE_URL);
         Assertions.assertEquals(SITE_URL, driver.getCurrentUrl());
@@ -46,9 +47,10 @@ public class ParameterizedTestInputForms extends SeleniumSetUppClass{
     }
 
 
-    @ParameterizedTest
+    @ParameterizedTest(name = "{index} => param1= {0}, param2= {1}, summa= {2}")
     @MethodSource("data")
     @DisplayName("Enter two messages with different parameters")
+    @Order(2)
     public void  b_enterValues(String arg1, String arg2, String summa)
     {
         WebElement enterValueA = driver.findElement(By.id(("sum1")));
