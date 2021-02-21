@@ -5,7 +5,9 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -26,6 +28,8 @@ public class ParameterizedTestInputForms extends SeleniumSetUppClass{
                 Arguments.of("jdnfhiew","-oiokl","NaN")
         );
     }
+
+    
 
     String SITE_URL = "https://www.seleniumeasy.com/test/basic-first-form-demo.html";
 
@@ -54,6 +58,10 @@ public class ParameterizedTestInputForms extends SeleniumSetUppClass{
     public void  b_enterValues(String arg1, String arg2, String summa)
     {
         WebElement enterValueA = driver.findElement(By.id(("sum1")));
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(enterValueA);
+
         enterValueA.clear();
         enterValueA.sendKeys(arg1);
         BasePage.sleep(1000);

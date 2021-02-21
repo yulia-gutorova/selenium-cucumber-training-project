@@ -1,5 +1,6 @@
 package cucumber_steps;
 
+import io.cucumber.java.bs.A;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,6 +11,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import selenium_tests.BasePage;
 
@@ -17,6 +19,7 @@ public class PropmtAlert_Steps {
 
     WebDriver driver;
     WebDriverWait wait;
+
 
     @Given("I am on the Alert box page")
     public void iAmOnTheAlertBoxPage(String url) {
@@ -33,7 +36,9 @@ public class PropmtAlert_Steps {
     @When("I click on the Click for Prompt Box")
     public void iClickOnThrClickForPromptBox() {
         System.out.print("2.  ");
-        driver.findElement(By.xpath("//button[@onclick='myPromptFunction()']")).click();
+        Actions actions = new Actions(driver);
+        actions.moveToElement(driver.findElement(By.xpath("//button[@onclick='myPromptFunction()']"))).click().build().perform();
+        //driver.findElement(By.xpath("//button[@onclick='myPromptFunction()']")).click();
         BasePage.sleep(1000);
     }
 

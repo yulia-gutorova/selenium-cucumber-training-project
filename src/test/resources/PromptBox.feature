@@ -12,3 +12,4 @@ Feature: handling Prompt Alert
     |text   |expectedMessage|
     |My name|You have entered 'My name' !|
     |       |                            |
+

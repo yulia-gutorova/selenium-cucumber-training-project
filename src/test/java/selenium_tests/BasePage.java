@@ -18,8 +18,6 @@ public class BasePage {
     public static void openHomePage(String url)
     {
         driver.get(url);
-        Assertions.assertEquals(url, driver.getCurrentUrl());
-        BasePage.sleep(1000);
     }
 
 }
