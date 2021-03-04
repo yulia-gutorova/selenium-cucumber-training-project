@@ -24,7 +24,7 @@ public class SeleniumTestWindowPopup extends SeleniumSetUppClass {
     {
         driver.get(SITE_URL);
         Assertions.assertEquals(SITE_URL, driver.getCurrentUrl());
-        BasePage.sleep(1000);
+        BasePage.sleep(1000); 
     }
 
     @Test

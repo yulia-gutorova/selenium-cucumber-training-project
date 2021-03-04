@@ -9,7 +9,7 @@ Feature: handling Prompt Alert
     Then Alert will return text as output "<expectedMessage>"
 
     Examples:
-    |text   |expectedMessage|
+    |text   |expectedMessage             |
     |My name|You have entered 'My name' !|
     |       |                            |
 
