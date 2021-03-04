@@ -1,6 +1,6 @@
 package cucumber_steps;
 
-import io.cucumber.java.After;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -8,7 +8,6 @@ import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,8 +15,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import selenium_tests.BasePage;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class BootstrapAlertMessages_steps {
     WebDriver driver;
@@ -103,7 +100,16 @@ public class BootstrapAlertMessages_steps {
         System.out.print("6. ");
         driver.close();
     }
+//-----------------------------------------------------------------------
 
+
+    @And("I click on appropriate button {string}")
+    public void iClickOnAppropriateButton(String closeButton) {
+        System.out.print("4. ");
+        driver.findElement(By.cssSelector(closeButton)).click();
+        BasePage.sleep(1000);
+
+    }
 
 /*    @When("I get the list of Bootstrap Alert messages")
     public void iGetTheListOfBootstrapAlertMessages() {

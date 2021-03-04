@@ -29,8 +29,6 @@ public class ParameterizedTestInputForms extends SeleniumSetUppClass{
         );
     }
 
-    
-
     String SITE_URL = "https://www.seleniumeasy.com/test/basic-first-form-demo.html";
 
     @DisplayName("Open a website")
