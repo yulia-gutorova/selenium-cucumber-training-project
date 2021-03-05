@@ -1,4 +1,4 @@
-Feature: handling Prompt Alert
+Feature: Handling Prompt Alert
 
   Scenario Outline: To click on the OK button of the prompt alert
     Given I am on the Alert box page

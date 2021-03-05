@@ -1,3 +1,4 @@
+@BootstrapAlert
 Feature: Inspect alert dialog boxes
 
 
@@ -26,7 +27,7 @@ Feature: Inspect alert dialog boxes
 #  Autocloseable info message
 #  Normal info message
 
-  @BootstrapAlert
+
  Scenario Outline: Inspect normal messages
     Given I am on the Bootstrap Alert messages home page
       |https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html|

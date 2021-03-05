@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources",
         glue = {"cucumber_steps"},
-        tags = "@BootstrapAlert",
+        tags = "@Bootstrap",
         plugin = {"pretty", "summary"},
         publish = true)
-public class BootstrapAlertTestRunner {
+public class TagTestRunner {
 
 }
