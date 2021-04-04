@@ -1,24 +1,4 @@
-# Selenium & Cucumber Training Project
 
-This is a training project to study Selenium and Cucuber for UI testing of [seleniumeasy.com/test/](https://www.seleniumeasy.com/test/) site.
-
-Seleniumeasy.com site contains all possible UI elements such as Input Forms, Date pickers, Table, Progress Bars & Sliders, etc.
-
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-### Prerequisites
-
-* IntelliJ or your preferred IDE
-* Java 1.8+
-* Maven 3.8.1+
-* JUnit 5.7+
-* Selenium 3.141+
-* Cucumber 6.9.1+
-
-All dependencies are listed in `pom.xml`
 
 ### Installing
 

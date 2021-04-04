@@ -12,6 +12,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import selenium_tests.BasePage;
 
+//Bootstrap Modal Example for Automation
+//Single modal example
+
 public class BootstrapModalWindows_steps {
 
      WebDriver driver;
@@ -28,7 +31,7 @@ public class BootstrapModalWindows_steps {
         BasePage.sleep(1000);
     }
 
-    @When("I click on button Launch modal")
+    @When("I click on button *Launch modal*")
     public void iClickOnButtonLaunchModal(String button) {
         System.out.print("2. ");
         driver.findElement(By.xpath(button)).click();
@@ -42,7 +45,7 @@ public class BootstrapModalWindows_steps {
         Assertions.assertTrue(driver.findElement(By.xpath("//h4[contains(text(),'Modal Title')]")).isDisplayed());
     }
 
-    @And("I click on button in Boots Modal Window")
+    @And("I click on button in Boots Modal Window {string}")
     public void iClickOnButtonInBootsModalWindow(String modalButton) {
         System.out.print("4. ");
         driver.findElement(By.cssSelector(modalButton)).click();

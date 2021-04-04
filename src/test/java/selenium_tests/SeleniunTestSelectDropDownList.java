@@ -28,17 +28,22 @@ public class SeleniunTestSelectDropDownList extends SeleniumSetUppClass{
     public void b_selectListDemo()
     {
         WebElement dropDownList = driver.findElement(By.id("select-demo"));
+
+        //Select a static dropdown with select tag
         Select selectDropDownElements = new Select(dropDownList);
         List <WebElement> options = selectDropDownElements.getOptions();
+
         options.remove(0);
 
         options.forEach(option -> {
+            //Select en option by visible text
             selectDropDownElements.selectByVisibleText(option.getText());
             BasePage.sleep(1000);
             String expectedString = "Day selected :- " + option.getText();
             String actualString = driver.findElement(By.xpath("//p[@class='selected-value']")).getText();
             Assert.assertEquals(expectedString, actualString);
         });
+
     }
 
     @Test
@@ -47,6 +52,7 @@ public class SeleniunTestSelectDropDownList extends SeleniumSetUppClass{
     {
         System.out.println("Multi Select List Demo");
         WebElement multiSelectList = driver.findElement(By.id("multi-select"));
+
         Select selectDropDownElements = new Select(multiSelectList);
         List <WebElement> values = selectDropDownElements.getOptions();
 
