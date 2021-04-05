@@ -1,13 +1,15 @@
-package selenium_tests;
+package selenium_tests.basic;
 
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import selenium_tests.BasePage;
+import selenium_tests.SeleniumSetUppClass;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class SeleniumTestAlertBoxes extends SeleniumSetUppClass{
+public class SeleniumTestAlertBoxes extends SeleniumSetUppClass {
 
     String SITE_URL = "https://www.seleniumeasy.com/test/javascript-alert-box-demo.html";
     Actions actions = new Actions (driver);

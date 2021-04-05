@@ -5,11 +5,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import selenium_tests.BasePage;
+import selenium_tests.SeleniumSetUppClass;
 
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 
-public class SeleniumTestInputForms extends SeleniumSetUppClass{
+public class SeleniumSimpleFormDemoTest extends SeleniumSetUppClass {
 
     String SITE_URL = "https://www.seleniumeasy.com/test/basic-first-form-demo.html";
 

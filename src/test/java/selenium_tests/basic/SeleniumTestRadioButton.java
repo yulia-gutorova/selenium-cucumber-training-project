@@ -1,15 +1,17 @@
-package selenium_tests;
+package selenium_tests.basic;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import selenium_tests.BasePage;
+import selenium_tests.SeleniumSetUppClass;
 
 import java.util.List;
 
 
-public class SeleniumTestRadioButton extends  SeleniumSetUppClass{
+public class SeleniumTestRadioButton extends SeleniumSetUppClass {
     String SITE_URL = "https://www.seleniumeasy.com/test/basic-radiobutton-demo.html";
 
     @Test

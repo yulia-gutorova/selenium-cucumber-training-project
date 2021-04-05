@@ -1,21 +1,22 @@
-package selenium_tests;
+package selenium_tests.basic;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import selenium_tests.BasePage;
+import selenium_tests.SeleniumSetUppClass;
 
 
 import java.util.stream.Stream;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class ParameterizedTestInputForms extends SeleniumSetUppClass{
+public class ParameterizedTestInputForms extends SeleniumSetUppClass {
 
     public  static Stream <Arguments> data()
     {

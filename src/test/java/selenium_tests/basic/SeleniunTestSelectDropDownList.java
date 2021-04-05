@@ -1,16 +1,18 @@
-package selenium_tests;
+package selenium_tests.basic;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import selenium_tests.BasePage;
+import selenium_tests.SeleniumSetUppClass;
 
 import java.util.List;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 
-public class SeleniunTestSelectDropDownList extends SeleniumSetUppClass{
+public class SeleniunTestSelectDropDownList extends SeleniumSetUppClass {
 
     String  SITE_URL = "https://www.seleniumeasy.com/test/basic-select-dropdown-demo.html";
 

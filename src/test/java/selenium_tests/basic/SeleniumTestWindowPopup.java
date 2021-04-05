@@ -1,9 +1,11 @@
-package selenium_tests;
+package selenium_tests.basic;
 
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import selenium_tests.BasePage;
+import selenium_tests.SeleniumSetUppClass;
 
 
 import java.util.Set;
