@@ -1,8 +1,6 @@
 package selenium_tests.basic;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import selenium_tests.BasePage;
@@ -10,11 +8,13 @@ import selenium_tests.SeleniumSetUppClass;
 
 import java.util.List;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
 public class SeleniumTestRadioButton extends SeleniumSetUppClass {
     String SITE_URL = "https://www.seleniumeasy.com/test/basic-radiobutton-demo.html";
 
     @Test
+    @Order(1)
     @DisplayName("Open the page")
     public void openPage()
     {
@@ -24,6 +24,7 @@ public class SeleniumTestRadioButton extends SeleniumSetUppClass {
     }
 
     @Test
+    @Order(2)
     @DisplayName("Radio Button Demo - Click on button to get the selected value")
     public void b_clickOnRadioButton()
     {
@@ -49,6 +50,7 @@ public class SeleniumTestRadioButton extends SeleniumSetUppClass {
     }
 
     @Test
+    @Order(3)
     @DisplayName("Group Radio Buttons Demo - Click on button to get the selected value from group")
     public void c_clickOnGroupsRadioButton()
     {

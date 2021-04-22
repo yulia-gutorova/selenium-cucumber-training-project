@@ -1,4 +1,4 @@
-Feature: Handling Prompt Alert
+Feature: Handling Prompt Alert (Javascript Alerts)
 
   Scenario Outline: To click on the OK button of the prompt alert
     Given I am on the Alert box page
@@ -10,6 +10,6 @@ Feature: Handling Prompt Alert
 
     Examples:
     |text   |expectedMessage             |
-    |My name|You have entered 'My name' !|
-    |       |                            |
+    |Yulia  |You have entered 'My name' !|
+
 

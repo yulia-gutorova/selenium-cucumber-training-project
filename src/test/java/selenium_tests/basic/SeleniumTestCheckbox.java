@@ -1,4 +1,4 @@
-package selenium_tests;
+package selenium_tests.basic;
 
 import org.junit.jupiter.api.*;
 
@@ -7,10 +7,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import selenium_tests.BasePage;
+import selenium_tests.SeleniumSetUppClass;
 
 import java.util.List;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
+
+//A basic example to start with checkboxes using selenium.
 
 public class SeleniumTestCheckbox extends SeleniumSetUppClass {
 

@@ -11,7 +11,7 @@ import selenium_tests.SeleniumSetUppClass;
 import java.util.Set;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class SeleniumTestWindowPopup extends SeleniumSetUppClass {
+public class SeleniumTestWindowPopupModal extends SeleniumSetUppClass {
 
     String SITE_URL = "https://www.seleniumeasy.com/test/window-popup-modal-demo.html";
     Actions actions = new Actions(driver);

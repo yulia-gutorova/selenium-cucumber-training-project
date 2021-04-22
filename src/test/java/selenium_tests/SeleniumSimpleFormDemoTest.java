@@ -81,6 +81,4 @@ public class SeleniumSimpleFormDemoTest extends SeleniumSetUppClass {
         WebElement total = driver.findElement(By.id("displayvalue"));
         Assertions.assertEquals("3", total.getText());
     }
-
-
 }

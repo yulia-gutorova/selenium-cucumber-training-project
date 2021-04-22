@@ -9,7 +9,7 @@ import selenium_tests.BasePage;
 import selenium_tests.SeleniumSetUppClass;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class SeleniumTestAlertBoxes extends SeleniumSetUppClass {
+public class SeleniumTestJavascriptAlerts extends SeleniumSetUppClass {
 
     String SITE_URL = "https://www.seleniumeasy.com/test/javascript-alert-box-demo.html";
     Actions actions = new Actions (driver);
