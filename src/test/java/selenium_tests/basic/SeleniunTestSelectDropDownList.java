@@ -32,6 +32,7 @@ public class SeleniunTestSelectDropDownList extends SeleniumSetUppClass {
         WebElement dropDownList = driver.findElement(By.id("select-demo"));
 
         //Select a static dropdown with select tag
+        //Class Select
         Select selectDropDownElements = new Select(dropDownList);
         List <WebElement> options = selectDropDownElements.getOptions();
 

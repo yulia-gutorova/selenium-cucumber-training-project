@@ -87,9 +87,10 @@ public class SeleniumTestCheckbox extends SeleniumSetUppClass {
         WebElement checkButton = driver.findElement(By.id("check1"));
         checkButton.click();
         BasePage.sleep(1000);
+
         List<WebElement> checkBoxes = driver.findElements(By.xpath("//input[@class='cb1-element']"));
 
-        checkButton = driver.findElement(By.id("check1"));
+        //checkButton = driver.findElement(By.id("check1"));
         BasePage.sleep(1000);
 
         Assertions.assertTrue(checkButton.getAttribute("value").contains("Uncheck All"));
@@ -107,7 +108,7 @@ public class SeleniumTestCheckbox extends SeleniumSetUppClass {
 
         List<WebElement> checkBoxes = driver.findElements(By.xpath("//input[@class='cb1-element']"));
 
-        checkButton = driver.findElement(By.id("check1"));
+        //checkButton = driver.findElement(By.id("check1"));
 
         BasePage.sleep(1000);
 
