@@ -13,7 +13,7 @@ import selenium_tests.SeleniumSetUppClass;
 import java.util.List;
 import java.util.Set;
 
-public class MultipleModal extends SeleniumSetUppClass {
+public class  MultipleModal extends SeleniumSetUppClass {
 
     public static WebDriver driver;
     //String SITE_URL = "https://www.seleniumeasy.com/test/bootstrap-modal-demo.html#myModal"

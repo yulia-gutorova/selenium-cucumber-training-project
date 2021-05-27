@@ -39,6 +39,8 @@ public class AjaxFormSubmit_Steps{
         System.out.print("2.  ");
         driver.findElement(By.id("title")).sendKeys(name);
         BasePage.sleep(1000);
+        //???System.out.println("Name: " + driver.findElement(By.id("title")).getText());
+        BasePage.sleep(1000);
     }
     @When("I miss field Name")
     public void iMissFieldName() {
@@ -65,9 +67,21 @@ public class AjaxFormSubmit_Steps{
         System.out.print("5.  ");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         String mess = driver.findElement(By.id("submit-control")).getText();
-        Assertions.assertTrue(mess.contains("Form submited Successfully!"));
-        driver.quit();
+        Assertions.assertTrue(mess.contains(successMessage));
+
     }
+
+/*    @And("{string} is visible in the Name field and {string} is visible in the Comment field")
+    public void isVisibleInTheNameFieldAndIsVisibleInTheCommentField(String name, String comment) {
+        //driver.findElement(By.id("title"))
+        //driver.findElement(By.id("description"))
+        System.out.print("6.  ");
+        //System.out.println("Name" + driver.findElement(By.id("title")).getText());
+        //System.out.println("Comment" + driver.findElement(By.id("description")).getText());
+        //Assertions.assertTrue(driver.findElement(By.id("title")).getText().contains(name));
+        //Assertions.assertTrue(driver.findElement(By.id("description")).getText().contains(comment));
+        driver.quit();
+    }*/
 
     @Then("field Name borders will turn red")
     public void fieldNameBordersWillTurnRed() {

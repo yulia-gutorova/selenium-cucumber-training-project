@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources",
         glue = {"cucumber_steps"},
-        tags = "@Bootstrap",
+        tags = "@AjaxForm",
         plugin = {"pretty", "summary"},
         publish = true)
 public class TagTestRunner {

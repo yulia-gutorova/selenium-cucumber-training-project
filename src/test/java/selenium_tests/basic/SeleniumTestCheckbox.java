@@ -16,7 +16,7 @@ import java.util.List;
 
 //A basic example to start with checkboxes using selenium.
 
-public class SeleniumTestCheckbox extends SeleniumSetUppClass {
+public class  SeleniumTestCheckbox extends SeleniumSetUppClass {
 
     String SITE_URL = "https://www.seleniumeasy.com/test/basic-checkbox-demo.html";
 

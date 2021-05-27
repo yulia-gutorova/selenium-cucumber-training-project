@@ -30,4 +30,4 @@ public class SeleniumSetUppClass {
     {
         driver.quit();
     }
-}
+    }
