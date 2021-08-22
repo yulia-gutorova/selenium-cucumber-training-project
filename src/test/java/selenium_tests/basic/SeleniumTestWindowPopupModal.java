@@ -49,6 +49,7 @@ public class SeleniumTestWindowPopupModal extends SeleniumSetUppClass {
                 driver.close();
             }
         });
+
         driver.switchTo().window(mainWindow);
     }
 
